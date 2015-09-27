@@ -30,7 +30,16 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
 			<% if current_user %>
-            	<li><a href="#"><%= "Welcome #{current_user.name}" %></a></li>
+				<li class="dropdown">
+          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= "Welcome #{current_user.name}" %><span class="caret"></span></a>
+          			<ul class="dropdown-menu">
+            			<li><a href="#">Another action</a></li>
+            			<li><a href="#">Separated link</a></li>
+            			<li><a href="#">Something else here</a></li>
+            			<li role="separator" class="divider"></li>
+            			<li><a href="/signout">logout</a></li>
+          			</ul>
+        		</li>
 			<% else %>
   				<li><form> <a href="/auth/github" class="btn btn-success navbar-btn btn-sm">Sign in with Github</a></form></li>
 			<% end  %>
@@ -40,13 +49,11 @@
     </nav>
 
     <div class="container">
-
       <div class="starter-template">
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
 		<%= yield %>
       </div>
-
     </div><!-- /.container -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
