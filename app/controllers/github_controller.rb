@@ -12,4 +12,11 @@ class GithubController < ApplicationController
         }.to_json
         render :json => @requests
   end
+
+  def getRepositories
+  end
+
+  def getPullRequests
+  end
+
 end
