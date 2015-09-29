@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'github/index'
+
 #root 'home#index'
 
   root to: "users#new"
