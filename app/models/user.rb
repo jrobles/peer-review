@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.name = auth["info"]["name"]
+Rails.logger.debug "Show this message!"
     end
   end
 
