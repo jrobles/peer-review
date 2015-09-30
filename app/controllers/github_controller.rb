@@ -3,7 +3,6 @@ class GithubController < ApplicationController
   end
 
   def pulls
-	client = Octokit::Client.new(:access_token => session[:at])
  	repo = client.repo 'KSCTECHNOLOGIES/realtimeprocess-development'
   	pulls = repo.rels[:pulls]
   	@requests = pulls.get().data
