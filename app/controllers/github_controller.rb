@@ -5,8 +5,8 @@ class GithubController < ApplicationController
   def pulls
  	repo = client.repo 'KSCTECHNOLOGIES/realtimeprocess-development'
   	pulls = repo.rels[:pulls]
-  	@requests = pulls.get().data
-	@requests_json = @requests.collect { |item| 
+  	@pull_requests = pulls.get().data
+	@requests_json = @pull_requests.collect { |item| 
    		{:id => item.id, :title => item.title, :url => item.html_url, :author => item.user.login } 
    	}.to_json
   end
