@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/signout" => "sessions#destroy", :as => :signout
 
   get "/pulls" => "github#pulls"
+  get "/pull" => "github#pull"
   get "/repos" => "github#repos"
 
   # The priority is based upon order of creation: first created -> highest priority.
