@@ -5,6 +5,10 @@ class SessionsController < ApplicationController
 		user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth)
 		session[:user_id] = user.id
 		session[:user_data] = user
+		session[:user_nick] = auth.info.nickname
+		session[:user_avatar] = auth.info.image
+		session[:at] = auth.credentials.token
+
 		redirect_to root_url, :notice => "Signed in!"
   	end
  
