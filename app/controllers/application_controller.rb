@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 	helper_method :current_user
 	helper_method :client
+	helper_method :avatar
  
   	private
  
@@ -14,4 +15,9 @@ class ApplicationController < ActionController::Base
   def client
 	@client = Octokit::Client.new(:access_token => session[:at])
   end
+
+  def avatar
+	@avatar = session[:user_avatar]
+  end
+
 end

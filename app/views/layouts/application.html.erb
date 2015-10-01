@@ -31,6 +31,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
 			<% if current_user %>
+				<%= image_tag(avatar, size: "35x35", alt: "Edit Entry")%>
 				<li class="dropdown">
           			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= "Welcome #{current_user.name}" %><span class="caret"></span></a>
           			<ul class="dropdown-menu">
