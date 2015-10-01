@@ -2,11 +2,34 @@
 
 
 <% @pull_requests.each do |pull_request| %>
+<div class="repository-with-sidebar repo-container new-discussion-timeline">
+	<ul class="table-list table-list-bordered table-list-issues js-navigation-container js-active-navigation-container">
+		<li id="issue_1982" class="selectable read table-list-item js-navigation-item js-issue-row">
+			<label class="table-list-cell table-list-cell-checkbox">
+     			<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1982">
+    		</label>
+			<div class="table-list-cell table-list-cell-type">
+    			<a href="/KSCTECHNOLOGIES/realtimeprocess-development/issues?q=is%3Apr+is%3Aopen" aria-label="View all pull requests" class="tooltipped tooltipped-n">
+      				<span class="octicon octicon-git-pull-request open"></span>
+				</a>
+			</div>
+			<div class="table-list-cell issue-title">
+<%= link_to pull_request.title, pull_path(pull_request.id),class: "issue-title-link js-navigation-open" %>  
 
-<%= link_to pull_request.title, pull_request.html_url,:target => "_blank" %>
+     			<div class="issue-meta">
+      				<span class="issue-meta-section opened-by">#<%=pull_request.number %> opened <time datetime="2015-09-30T20:07:10Z" is="relative-time" title="Sep 30, 2015, 4:07 PM EDT">6 hours ago</time> by
+          				<a href="/KSCTECHNOLOGIES/realtimeprocess-development/issues?q=is%3Apr+is%3Aopen+author%3Adstewart123" aria-label="View all pull requests opened by dstewart123" class="tooltipped tooltipped-s muted-link"><%=pull_request.user.login%></a>
+      				</span>
+      				<span class="issue-meta-section css-truncate issue-milestone"></span>
+				</div>
+  			</div>
+			<div class="table-list-cell table-list-cell-avatar"></div>
+			<div class="table-list-cell issue-comments">
+    			<a href="/KSCTECHNOLOGIES/realtimeprocess-development/pull/1982" class="muted-link "><span class="octicon octicon-comment"></span><%=pull_request.comments%></a>
+  			</div>
+		</li>
+  	</ul>
+</div>
 
-<hr>
 <% end %>
-
-
 <% @pull_requests %>
