@@ -1,9 +1,9 @@
 
 
 
-<% @pull_requests.each do |pull_request| %>
 <div class="repository-with-sidebar repo-container new-discussion-timeline">
 	<ul class="table-list table-list-bordered table-list-issues js-navigation-container js-active-navigation-container">
+<% @pull_requests.each do |pull_request| %>
 		<li id="issue_1982" class="selectable read table-list-item js-navigation-item js-issue-row">
 			<label class="table-list-cell table-list-cell-checkbox">
      			<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1982">
@@ -28,8 +28,8 @@
     			<a href="/KSCTECHNOLOGIES/realtimeprocess-development/pull/1982" class="muted-link "><span class="octicon octicon-comment"></span><%=pull_request.comments%></a>
   			</div>
 		</li>
+    <% end %>
   	</ul>
 </div>
 
-<% end %>
 <% @pull_requests %>
