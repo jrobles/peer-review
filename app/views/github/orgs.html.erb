@@ -1,0 +1,5 @@
+<%@orgs.each do |org|%>
+<img src="<%=org.avatar_url%>"></br>
+<%= link_to org.login, repos_path(:org_name => org.login),class: "issue-title-link js-navigation-open" %>  
+</br>
+<% end %>

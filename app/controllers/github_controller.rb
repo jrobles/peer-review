@@ -2,17 +2,27 @@ class GithubController < ApplicationController
   def index
   end
 
+  def orgs
+	@orgs = client.orgs
+  end
+
+  def repos
+  	org =  CGI::unescape(params[:org_name])
+  	@repos = client.repos org
+  end
+
   def pulls
- 	repo = client.repo 'KSCTECHNOLOGIES/realtimeprocess-development'
+  	data = CGI::unescape(params[:repo])
+ 	repo = client.repo data
   	pulls = repo.rels[:pulls]
   	@pull_requests = pulls.get().data
   end
 
   def pull
-	@pull = client.pull_request 'KSCTECHNOLOGIES/realtimeprocess-development','1981'
+  	org =  CGI::unescape(params[:repo])
+	pr = CGI::unescape(params[:pid])
+	@pull = client.pull_request org,pr
   end
 
-  def repos
-  end
 
 end

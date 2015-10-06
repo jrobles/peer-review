@@ -1,0 +1,8 @@
+<% @repos.each do |repo| %>
+
+	<%=repo.name%>
+
+	<%= link_to repo.name, pulls_path(:repo => repo.full_name),class: "issue-title-link js-navigation-open" %>  
+
+
+<% end %>
