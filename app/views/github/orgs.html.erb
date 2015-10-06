@@ -1,5 +1,10 @@
-<%@orgs.each do |org|%>
-<img src="<%=org.avatar_url%>"></br>
-<%= link_to org.login, repos_path(:org_name => org.login),class: "issue-title-link js-navigation-open" %>  
-</br>
-<% end %>
+<div class="row">
+	<div class="col-lg-12">
+   		<h1 class="page-header">Your Organizations</h1>
+  	</div>
+	<%@orgs.each do |org|%>
+    	<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+			<%= link_to image_tag(org.avatar_url,:width => "200px"), repos_path(:org_name => org.login), :class => 'thumbnail' %>
+     	</div>
+	<% end %>
+</div>

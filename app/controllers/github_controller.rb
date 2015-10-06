@@ -23,6 +23,4 @@ class GithubController < ApplicationController
 	pr = CGI::unescape(params[:pid])
 	@pull = client.pull_request org,pr
   end
-
-
 end
