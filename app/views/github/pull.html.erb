@@ -1,175 +1,72 @@
-<%= @pull.url %>
-<%= @pull.title %>
-<%= @pull.diff_url %>
-
-
-<div id="diff-4" class="file js-details-container
-                   
-                   
-                   
-                   
-                   show-inline-notes
-                 ">
-        <div class="file-header" data-path="app/webroot/js/Manage/Views/SaveFilterActionItem.js">
-          <div class="file-actions">
-              <span class="show-file-notes">
-                <label>
-                  <input type="checkbox" checked="checked" class="js-toggle-file-notes">
-                  Show notes
-                </label>
-              </span>
-
-                <a href="/teophilus/catclaw/blob/refactor_chore_SW-631/app/webroot/js/Manage/Views/SaveFilterActionItem.js" class="btn btn-sm tooltipped tooltipped-n" rel="nofollow" aria-label="View the whole file">View</a>
-
-                <a class="octicon-btn tooltipped tooltipped-nw" href="github-mac://openRepo/https://github.com/KSCTECHNOLOGIES/catclaw?branch=pr%2F178&amp;filepath=app%2Fwebroot%2Fjs%2FManage%2FViews%2FSaveFilterActionItem.js&amp;pr=178" aria-label="Open this file in GitHub Desktop" data-ga-click="Repository, open with desktop, type:mac">
-                    <span class="octicon octicon-device-desktop"></span>
-                </a>
-
-                  <a href="/teophilus/catclaw/edit/refactor_chore_SW-631/app/webroot/js/Manage/Views/SaveFilterActionItem.js?pr=/KSCTECHNOLOGIES/catclaw/pull/178" class="octicon-btn tooltipped tooltipped-nw" rel="nofollow" data-skip-pjax="" aria-label="Change this file using the online editor"><span class="octicon octicon-pencil"></span></a>
-          </div>
-          <div class="file-info">
-              <span class="diffstat tooltipped tooltipped-e" aria-label="1 addition &amp; 0 deletions">1 <span class="diffstat-bar"><span class="text-diff-added"></span></span></span>
-
-            <span class="user-select-contain" title="app/webroot/js/Manage/Views/SaveFilterActionItem.js">
-              app/webroot/js/Manage/Views/SaveFilterActionItem.js
-            </span>
-            
-          </div>
+<% @pull.diff_url %>
+<hr>
+<h2><%= @pull.title %></h2>
+<h3><%= @pull.url %></h3>
+<hr>
+<div class="flex-table gh-header-meta">
+    <div class="flex-table-item">
+        <div class="state state-open">
+          <span class="octicon octicon-git-pull-request"></span>
+          Open
         </div>
+    </div>
+    <div class="flex-table-item flex-table-item-primary">
+		<a href="/teophilus" class="author pull-header-username css-truncate css-truncate-target expandable">teophilus</a>
+   		wants to merge 1 commit into
+		<span class="commit-ref current-branch css-truncate user-select-contain expandable"><span class="css-truncate-target user">KSCTECHNOLOGIES</span>:<span class="css-truncate-target">refactor</span></span>
+		from
+		<span class="commit-ref current-branch css-truncate user-select-contain expandable"><span class="css-truncate-target user">teophilus</span>:<span class="css-truncate-target">refactor_chore_SW-631</span></span>
+    </div>
+  </div>
+<hr>
+<div class="file">
+	<div class="header">app/webroot/js/Manage/Views/SaveFilterActionItem.js</div>
+	<ul class="diff">
+		<li>console.log('callback1', arguments);</li>
+		<li>self.destroyReviewalTools();</li>
+		<li>self.fetch();</li>
+		<li class="red"><span>-</span></li>
+		<li class="freen"><span>+</span>ga('send', 'event', 'Manage - Asset Review', 'Click', 'Initialize Annotation');</li>
+	</ul>
+</div>
 
-            <div class="data highlight blob-wrapper">
-              <table class="diff-table tab-size  " data-tab-size="8">
-                
-      <tbody><tr class="js-expandable-line" data-position="0">
-    <td class="blob-num blob-num-expandable" colspan="2">
-      <a href="#diff-0af092f89d0a00349041cf2d003eb83f" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/KSCTECHNOLOGIES/catclaw/blob_excerpt/3f4bb260dc14fe162d9a5058fd61be96ac5edb52?diff=unified&amp;left_hunk_size=6&amp;mode=100644&amp;next_line_num_left=38&amp;next_line_num_right=38&amp;path=app%2Fwebroot%2Fjs%2FManage%2FViews%2FSaveFilterActionItem.js&amp;prev_line_num_left=&amp;prev_line_num_right=&amp;right_hunk_size=7" data-left-range="1-37" data-right-range="1-37">
-        <span class="octicon octicon-unfold"></span>
-      </a>
-    </td>
-    <td class="blob-code blob-code-inner blob-code-hunk">@@ -38,6 +38,7 @@ RT.define('Manage.Views.SaveFilterActionItem', Realtime.Datatable.Views.ActionIt</td>
-  </tr>
+<div class="file">
+	<div class="header">app/webroot/js/Manage/Views/SaveFilterActionItem.js</div>
+	<ul class="diff">
+		<li>console.log('callback1', arguments);</li>
+		<li>self.destroyReviewalTools();</li>
+		<li>self.fetch();</li>
+		<li class="red"><span>-</span></li>
+		<li class="freen"><span>+</span>ga('send', 'event', 'Manage - Asset Review', 'Click', 'Initialize Annotation');</li>
+	</ul>
+</div>
 
-    
+<div class="file">
+	<div class="header">app/webroot/js/Manage/Views/SaveFilterActionItem.js</div>
+	<ul class="diff">
+		<li>console.log('callback1', arguments);</li>
+		<li>self.destroyReviewalTools();</li>
+		<li>self.fetch();</li>
+		<li class="red"><span>-</span></li>
+		<li class="freen"><span>+</span>ga('send', 'event', 'Manage - Asset Review', 'Click', 'Initialize Annotation');</li>
+	</ul>
+</div>
 
-<tr>
-    <td id="diff-0af092f89d0a00349041cf2d003eb83fL38" data-line-number="38" class="blob-num blob-num-context js-linkable-line-number"></td>
+<div class="file">
+	<div class="header">app/webroot/js/Manage/Views/SaveFilterActionItem.js</div>
+	<ul class="diff">
+		<li>console.log('callback1', arguments);</li>
+		<li>self.destroyReviewalTools();</li>
+		<li>self.fetch();</li>
+		<li class="red"><span>-</span></li>
+		<li class="freen"><span>+</span>ga('send', 'event', 'Manage - Asset Review', 'Click', 'Initialize Annotation');</li>
+	</ul>
+</div>
 
-    <td id="diff-0af092f89d0a00349041cf2d003eb83fR38" data-line-number="38" class="blob-num blob-num-context js-linkable-line-number"></td>
+<hr>
 
-  <td class="blob-code blob-code-context">
-      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="app/webroot/js/Manage/Views/SaveFilterActionItem.js" data-anchor="diff-0af092f89d0a00349041cf2d003eb83f" data-position="1" data-line="38" role="button" aria-label="Add line comment"></span>
+COMMENT FEED HERE
 
-    <span class="blob-code-inner">     <span class="pl-en">onClick</span><span class="pl-k">:</span> <span class="pl-k">function</span>() {</span>
+<hr>
 
-  </td>
-</tr>
-
-
-    
-
-<tr>
-    <td id="diff-0af092f89d0a00349041cf2d003eb83fL39" data-line-number="39" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-    <td id="diff-0af092f89d0a00349041cf2d003eb83fR39" data-line-number="39" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-  <td class="blob-code blob-code-context">
-      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="app/webroot/js/Manage/Views/SaveFilterActionItem.js" data-anchor="diff-0af092f89d0a00349041cf2d003eb83f" data-position="2" data-line="39" role="button" aria-label="Add line comment"></span>
-
-    <span class="blob-code-inner">         <span class="pl-k">if</span>(<span class="pl-v">this</span>.active) {</span>
-
-  </td>
-</tr>
-
-
-    
-
-<tr>
-    <td id="diff-0af092f89d0a00349041cf2d003eb83fL40" data-line-number="40" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-    <td id="diff-0af092f89d0a00349041cf2d003eb83fR40" data-line-number="40" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-  <td class="blob-code blob-code-context">
-      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="app/webroot/js/Manage/Views/SaveFilterActionItem.js" data-anchor="diff-0af092f89d0a00349041cf2d003eb83f" data-position="3" data-line="40" role="button" aria-label="Add line comment"></span>
-
-    <span class="blob-code-inner">             <span class="pl-v">this</span>.controller.loadSaveFilterViewAction(<span class="pl-v">this</span>.view, {datatable<span class="pl-k">:</span> <span class="pl-v">this</span>.datatable});</span>
-
-  </td>
-</tr>
-
-
-    
-
-<tr>
-    <td class="blob-num blob-num-addition empty-cell"></td>
-
-    <td id="diff-0af092f89d0a00349041cf2d003eb83fR41" data-line-number="41" class="blob-num blob-num-addition js-linkable-line-number"></td>
-
-  <td class="blob-code blob-code-addition">
-      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="app/webroot/js/Manage/Views/SaveFilterActionItem.js" data-anchor="diff-0af092f89d0a00349041cf2d003eb83f" data-position="4" data-line="41" role="button" aria-label="Add line comment"></span>
-
-    <span class="blob-code-inner">+            ga(<span class="pl-s"><span class="pl-pds">'</span>send<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>event<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>Manage<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>Click<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>Save Filter As<span class="pl-pds">'</span></span>);</span>
-
-  </td>
-</tr>
-
-
-    
-
-<tr>
-    <td id="diff-0af092f89d0a00349041cf2d003eb83fL41" data-line-number="41" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-    <td id="diff-0af092f89d0a00349041cf2d003eb83fR42" data-line-number="42" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-  <td class="blob-code blob-code-context">
-      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="app/webroot/js/Manage/Views/SaveFilterActionItem.js" data-anchor="diff-0af092f89d0a00349041cf2d003eb83f" data-position="5" data-line="42" role="button" aria-label="Add line comment"></span>
-
-    <span class="blob-code-inner">         }</span>
-
-  </td>
-</tr>
-
-
-    
-
-<tr>
-    <td id="diff-0af092f89d0a00349041cf2d003eb83fL42" data-line-number="42" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-    <td id="diff-0af092f89d0a00349041cf2d003eb83fR43" data-line-number="43" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-  <td class="blob-code blob-code-context">
-      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="app/webroot/js/Manage/Views/SaveFilterActionItem.js" data-anchor="diff-0af092f89d0a00349041cf2d003eb83f" data-position="6" data-line="43" role="button" aria-label="Add line comment"></span>
-
-    <span class="blob-code-inner">     },</span>
-
-  </td>
-</tr>
-
-
-    
-
-<tr>
-    <td id="diff-0af092f89d0a00349041cf2d003eb83fL43" data-line-number="43" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-    <td id="diff-0af092f89d0a00349041cf2d003eb83fR44" data-line-number="44" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-  <td class="blob-code blob-code-context">
-      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="app/webroot/js/Manage/Views/SaveFilterActionItem.js" data-anchor="diff-0af092f89d0a00349041cf2d003eb83f" data-position="7" data-line="44" role="button" aria-label="Add line comment"></span>
-
-    <span class="blob-code-inner">     <span class="pl-en">setActiveStatus</span><span class="pl-k">:</span> <span class="pl-k">function</span>(<span class="pl-smi">status</span>) {</span>
-
-  </td>
-</tr>
-
-
-  <tr class="js-expandable-line">
-   <td class="blob-num blob-num-expandable" colspan="2">
-     <a href="#diff-0af092f89d0a00349041cf2d003eb83f" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/KSCTECHNOLOGIES/catclaw/blob_excerpt/3f4bb260dc14fe162d9a5058fd61be96ac5edb52?diff=unified&amp;mode=100644&amp;path=app%2Fwebroot%2Fjs%2FManage%2FViews%2FSaveFilterActionItem.js&amp;prev_line_num_left=43&amp;prev_line_num_right=44" data-left-range="44-51" data-right-range="45-51">
-       <span class="octicon octicon-unfold"></span>
-     </a>
-   </td>
-   <td class="blob-code blob-code-expandable"></td>
-  </tr>
-
-              </tbody></table>
-            </div>
-      </div>
+NEW COMMENT FORM HERE
