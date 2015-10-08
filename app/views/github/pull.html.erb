@@ -1,21 +1,20 @@
-<% @pull.diff_url %>
+<%@pull.diff_url %>
 <hr>
 <h2><%= @pull.title %></h2>
-<h3><%= @pull.url %></h3>
 <hr>
 <div class="flex-table gh-header-meta">
     <div class="flex-table-item">
         <div class="state state-open">
           <span class="octicon octicon-git-pull-request"></span>
-          Open
+          <%=@pull.state %>
         </div>
     </div>
     <div class="flex-table-item flex-table-item-primary">
-		<a href="/teophilus" class="author pull-header-username css-truncate css-truncate-target expandable">teophilus</a>
+		<a href="#" class="author pull-header-username css-truncate css-truncate-target expandable"><%=@pull.head.user.login %></a>
    		wants to merge 1 commit into
-		<span class="commit-ref current-branch css-truncate user-select-contain expandable"><span class="css-truncate-target user">KSCTECHNOLOGIES</span>:<span class="css-truncate-target">refactor</span></span>
+		<span class="commit-ref current-branch css-truncate user-select-contain expandable"><span class="css-truncate-target user"><%=@pull.base.repo.owner.login %></span>:<span class="css-truncate-target"><%=@pull.base.repo.name %></span></span>
 		from
-		<span class="commit-ref current-branch css-truncate user-select-contain expandable"><span class="css-truncate-target user">teophilus</span>:<span class="css-truncate-target">refactor_chore_SW-631</span></span>
+		<span class="commit-ref current-branch css-truncate user-select-contain expandable"><span class="css-truncate-target user"><%=@pull.head.repo.owner.login %></span>:<span class="css-truncate-target">refactor_chore_SW-631</span></span>
     </div>
   </div>
 <hr>
@@ -66,7 +65,7 @@
 <hr>
 
 COMMENT FEED HERE
-
+<%=@comments%>
 <hr>
 
 NEW COMMENT FORM HERE

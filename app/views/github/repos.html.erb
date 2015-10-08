@@ -2,7 +2,7 @@
 <% @repos.each do |repo| %>
 
 <li>
-	<%= link_to repo.name, pulls_path(:repo => repo.full_name) %> <span>public</span>
+	<%= link_to repo.name, pulls_path(:repo => repo.full_name) %> <span><%=repo.visibility%></span>
 </li>
 
 <% end %>
