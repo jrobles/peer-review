@@ -1,4 +1,4 @@
-<%@pull.diff_url %>
+<%=@pull.url %>
 <hr>
 <h2><%= @pull.title %></h2>
 <hr>
@@ -12,9 +12,9 @@
     <div class="flex-table-item flex-table-item-primary">
 		<a href="#" class="author pull-header-username css-truncate css-truncate-target expandable"><%=@pull.head.user.login %></a>
    		wants to merge 1 commit into
-		<span class="commit-ref current-branch css-truncate user-select-contain expandable"><span class="css-truncate-target user"><%=@pull.base.repo.owner.login %></span>:<span class="css-truncate-target"><%=@pull.base.repo.name %></span></span>
+		<span class="commit-ref current-branch css-truncate user-select-contain expandable"><span class="css-truncate-target user"><%=@pull.base.repo.owner.login %></span>:<span class="css-truncate-target"><%=@pull.base.ref%></span></span>
 		from
-		<span class="commit-ref current-branch css-truncate user-select-contain expandable"><span class="css-truncate-target user"><%=@pull.head.repo.owner.login %></span>:<span class="css-truncate-target">refactor_chore_SW-631</span></span>
+		<span class="commit-ref current-branch css-truncate user-select-contain expandable"><span class="css-truncate-target user"><%=@pull.head.repo.owner.login %></span>:<span class="css-truncate-target"><%=@pull.head.ref%></span></span>
     </div>
   </div>
 <hr>
@@ -66,6 +66,10 @@
 
 COMMENT FEED HERE
 <%=@comments%>
+<% @comments.each do |comment|%>
+fob
+<%= comment.url%>
+<% end %>
 <hr>
 
 NEW COMMENT FORM HERE

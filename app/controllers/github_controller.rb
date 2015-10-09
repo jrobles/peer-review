@@ -8,9 +8,9 @@ class GithubController < ApplicationController
 
   def repos
   	org =  CGI::unescape(params[:org_name])
-  	@repos = client.org_repos org
+  	@repos = client.org_repos org, {:type => 'member'}
 	@repos.each do |repo|
-		if repo.private === true
+		if repo.private === false
 			repo.visibility = "Public"
 		else
 			repo.visibility = "Private"
@@ -30,5 +30,6 @@ class GithubController < ApplicationController
 	pr = CGI::unescape(params[:pid])
 	@pull = client.pull_request org,pr
 	@comments = client.pull_request_comments org,pr
+	@commits = client.pull_commits org,pr
   end
 end
