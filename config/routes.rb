@@ -7,10 +7,11 @@ Rails.application.routes.draw do
   root to: "users#new"
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
-
+  
+  get "/orgs" => "github#orgs"
+  get "/repos" => "github#repos"
   get "/pulls" => "github#pulls"
   get "/pull" => "github#pull"
-  get "/repos" => "github#repos"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

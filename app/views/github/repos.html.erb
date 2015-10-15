@@ -1,0 +1,11 @@
+<ul>
+<% @repos.each do |repo| %>
+
+<li>
+	<%= link_to repo.name, pulls_path(:repo => repo.full_name) %> <span>public</span>
+</li>
+
+<% end %>
+</ul>
+
+<% @repos %>

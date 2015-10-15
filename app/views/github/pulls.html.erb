@@ -1,6 +1,3 @@
-
-
-
 <div class="repository-with-sidebar repo-container new-discussion-timeline">
 	<ul class="table-list table-list-bordered table-list-issues js-navigation-container js-active-navigation-container">
 <% @pull_requests.each do |pull_request| %>
@@ -14,7 +11,7 @@
 				</a>
 			</div>
 			<div class="table-list-cell issue-title">
-<%= link_to pull_request.title, pull_path(pull_request.id),class: "issue-title-link js-navigation-open" %>  
+<%= link_to pull_request.title, pull_path(:repo => pull_request.base.repo.full_name ,:pid => pull_request.number),class: "issue-title-link js-navigation-open" %>  
 
      			<div class="issue-meta">
       				<span class="issue-meta-section opened-by">#<%=pull_request.number %> opened <time datetime="2015-09-30T20:07:10Z" is="relative-time" title="Sep 30, 2015, 4:07 PM EDT">6 hours ago</time> by
@@ -25,11 +22,9 @@
   			</div>
 			<div class="table-list-cell table-list-cell-avatar"></div>
 			<div class="table-list-cell issue-comments">
-    			<a href="/KSCTECHNOLOGIES/realtimeprocess-development/pull/1982" class="muted-link "><span class="octicon octicon-comment"></span><%=pull_request.comments%></a>
+    			<a href="/KSCTECHNOLOGIES/realtimeprocess-development/pull/1982" class="muted-link "><span class="octicon octicon-comment"></span><%=pull_request.comments%></a> 4
   			</div>
 		</li>
     <% end %>
   	</ul>
 </div>
-
-<% @pull_requests %>
