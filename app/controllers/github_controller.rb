@@ -31,5 +31,7 @@ class GithubController < ApplicationController
 	@pull = client.pull_request org,pr
 	@comments = client.pull_request_comments org,pr
 	@commits = client.pull_commits org,pr
+
+#	render :text => @pull.inspect
   end
 end
