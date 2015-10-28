@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prId: 1
+  approverId: 1
+  dateApproved: 2015-10-28 19:03:25
+
+two:
+  prId: 1
+  approverId: 1
+  dateApproved: 2015-10-28 19:03:25

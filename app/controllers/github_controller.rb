@@ -23,6 +23,11 @@ class GithubController < ApplicationController
  	repo = client.repo data
   	pulls = repo.rels[:pulls]
   	@pull_requests = pulls.get().data
+
+	# Get the number of votes for each PR
+	@pull_requests.each do |pull_request|
+		pull_request.numVotes = PullRequestApproval.getNumApprovals(pull_request.id)
+	end
   end
 
   def pull
