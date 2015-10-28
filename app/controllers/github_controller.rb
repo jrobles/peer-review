@@ -8,7 +8,14 @@ class GithubController < ApplicationController
 
   def repos
   	org =  CGI::unescape(params[:org_name])
-  	@repos = client.repos org
+  	@repos = client.org_repos org, {:type => 'member'}
+	@repos.each do |repo|
+		if repo.private === false
+			repo.visibility = "Public"
+		else
+			repo.visibility = "Private"
+		end
+	end
   end
 
   def pulls
@@ -16,11 +23,20 @@ class GithubController < ApplicationController
  	repo = client.repo data
   	pulls = repo.rels[:pulls]
   	@pull_requests = pulls.get().data
+
+	# Get the number of votes for each PR
+	@pull_requests.each do |pull_request|
+		pull_request.numVotes = PullRequestApproval.getNumApprovals(pull_request.id)
+	end
   end
 
   def pull
   	org =  CGI::unescape(params[:repo])
 	pr = CGI::unescape(params[:pid])
 	@pull = client.pull_request org,pr
+	@comments = client.pull_request_comments org,pr
+	@commits = client.pull_commits org,pr
+
+#	render :text => @pull.inspect
   end
 end
