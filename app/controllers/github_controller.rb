@@ -26,7 +26,14 @@ class GithubController < ApplicationController
 
 	# Get the number of votes for each PR
 	@pull_requests.each do |pull_request|
-		pull_request.numVotes = PullRequestApproval.getNumApprovals(pull_request.id)
+		numVotes = PullRequestApproval.getNumApprovals(pull_request.id)
+		if (numVotes == 1)
+			pull_request.statusClass = "one_vote"
+		elseif (numVotes > 1) 
+			pull_request.statusClass = "two_votes"
+		else 
+			pull_request.statusClass = "no_votes"
+		end
 	end
   end
 
@@ -37,6 +44,6 @@ class GithubController < ApplicationController
 	@comments = client.pull_request_comments org,pr
 	@commits = client.pull_commits org,pr
 
-#	render :text => @pull.inspect
+	#render :text => @pull.inspect
   end
 end
