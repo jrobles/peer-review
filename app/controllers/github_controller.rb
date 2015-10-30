@@ -46,4 +46,9 @@ class GithubController < ApplicationController
 
 	#render :text => @pull.inspect
   end
+  
+  def approvePullRequest
+ 		prID = CGI::unescape(params[:prID]) 
+  end 
+
 end
